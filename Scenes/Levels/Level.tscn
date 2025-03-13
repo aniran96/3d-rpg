@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://c0enjk08j2tam"]
+[gd_scene load_steps=5 format=3 uid="uid://c0enjk08j2tam"]
+
+[ext_resource type="PackedScene" uid="uid://bvjexl3bafhwr" path="res://Scenes/Characters/Player/Player.tscn" id="1_echjq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2jbh7"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -22,9 +24,10 @@ environment = SubResource("Environment_02k47")
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+use_collision = true
 size = Vector3(50, 1, 50)
+
+[node name="Player" parent="." instance=ExtResource("1_echjq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
