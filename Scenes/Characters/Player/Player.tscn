@@ -17,9 +17,9 @@ mesh = SubResource("CapsuleMesh_nacle")
 [node name="PlayerCollider3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_nacle")
 
-[node name="SpringArm3D" type="SpringArm3D" parent="."]
+[node name="CameraSpringArm3D" type="SpringArm3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 0, 0)
 shape = SubResource("SeparationRayShape3D_no7dv")
 spring_length = 4.0
 
-[node name="PlayerCamera3D" type="Camera3D" parent="SpringArm3D"]
+[node name="PlayerCamera3D" type="Camera3D" parent="CameraSpringArm3D"]
