@@ -8,4 +8,5 @@ public class GameConstants
     public const string INPUT_BACK = "move_back";
     public const string JUMP = "jump";
     public const string INPUT_DASH = "dash";
+    public const string MOUSE_FREE = "mouse_free";
 }
